@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive uses set pixels when styling versus full responsive uses units based off the entire page. Ex: rem, em. Fully responsive best use for both desktop & mobile view.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Creating the CSS to begin with in mobile form, then adding @media to respond to desktop version
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+Makes site user friendly by taking into account acceibility
+
 4. How would you describe preprocessing to someone new to CSS?
 
+It's a method inside CSS to help make the coding easier by creating extra functions that can be used. Nesting, Variables, Mixin ext
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favortite part is it makes CSS easier by using mixin's & variables to place blocks of code and not having to repeat ones self. 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
@@ -81,13 +91,13 @@ Your finished project must include all of the following requirements:
 * [ ] Navigate to your `index.less` file. Notice the file is blank. You have been asked to use a certain import order. That order is as follows:
 
 ```markdown
-1.variables.less
+<!-- 1.variables.less
 2.mixins.less
 3.reset.less
 4.global.less
 5.navigation.less
 6.footer.less
-7.home-page.less
+7.home-page.less -->
 ```
 
 _You will know everything is working properly when you see the styles enabled for the provided content._  
