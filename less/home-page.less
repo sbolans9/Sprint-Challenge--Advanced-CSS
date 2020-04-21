@@ -1,31 +1,41 @@
 // Home Content
-
+@phone:500px;
 .home {
-
-  .intro {
-
-    h2 {
+  .intro{
+    section img{
+      .widthFull();
+    }
+    h2{
       padding: 15px;
     }
-
-    p {
+    p{
       padding:0 15px;
     }
-  
   }
 
-  .space-images {
+  .space-images{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
-    img {
+    .widthFull();
+    @media (max-width:@phone){
+      .sky{
+        display:none
+      }
+      .launch{
+        display:none;
+      }
+      .blast{
+        width:95%
+      }
+    }
+    img{
       width: 28%;
       margin: 20px 2.5%;
-      border-radius: 20px;
+      .borderRadius();
       height: 100%;
     }
   }
+  
 
   .visit-planets {
     padding: 15px;
@@ -38,17 +48,26 @@
       margin-top: 13px;
     }
   }
-
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
+    @media (max-width:@phone){
+      display: flex;
+      flex-direction: column-reverse;
+      padding:0;
+    }
+    
+    }
     .walk-text {
       width: 50%;
-
+      @media (max-width:@phone) {
+        width:95%;
+        margin:auto;
+        margin-top: 1rem;
+      }
       h3 {
         margin-bottom: 10px;
       }
@@ -58,18 +77,44 @@
       }
 
       .btn {
+        .signupButton(#23293B, white);
+        width:30%;
+        text-align: center;
+        font-size: medium;
+        padding: 1rem .5rem;
+        .borderRadius();
+        @media (max-width:@phone) {
+          width:100%;
+          border-radius: 5px;
+          height: 4rem;
+          margin-bottom: 1rem;
+        }
+        &:hover{
+          .signupButton(lighten(#23293B,10%), lightgrey)
+        }
       }
-    }
 
+    }
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+      @media (max-width:@phone) {
+        width:100%;
+        margin:0;
       }
-    }
-  }
-}// home
+        img {
+          width: 100%;
+          height: auto;
+          .borderRadius();
+          @media (max-width:@phone){
+            margin:1rem;
+            width:95%;
+            height:auto;
+            border-radius: 20px;
+          }
+          
+        } 
+    }  
+}
+
+// home
